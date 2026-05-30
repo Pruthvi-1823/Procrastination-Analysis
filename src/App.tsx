@@ -270,7 +270,7 @@ function GlassPanel({ children, style = {} }) {
 function SectionHead({ n, title, sub }) {
   return (
     <div style={{ marginBottom: 14 }}>
-      <div className="section-num">Chart {n}</div>
+      {n && <div className="section-num">Chart {n}</div>}
       <div className="section-title">{title}</div>
       {sub && <div className="section-sub">{sub}</div>}
     </div>
@@ -515,6 +515,41 @@ export default function App() {
                     <div style={{ fontSize:12, color:"rgba(60,40,100,0.95)", lineHeight:1.65 }}>{c.desc}</div>
                   </div>
                 ))}
+              </div>
+
+              {/* The Procrastinator's Journey Timeline */}
+              <div style={{ marginTop: 24 }}>
+                <GlassPanel>
+                  <SectionHead title="The Procrastinator's Journey" sub="A psychological map from task assignment to completion based on survey behavioral patterns" />
+                  
+                  <div style={{ position: "relative", marginTop: 20, paddingBottom: 10 }}>
+                    {/* Connecting Line */}
+                    <div style={{ position: "absolute", top: 24, left: 40, right: 40, height: 4, background: "rgba(180,160,240,0.2)", borderRadius: 4, zIndex: 0 }} />
+                    
+                    <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 10, position: "relative", zIndex: 1 }}>
+                      {[
+                        { title: "1. The Trigger", desc: "Task assigned. Initial anxiety or fear of imperfection kicks in.", icon: "🎯", color: "#a855f7" },
+                        { title: "2. Avoidance", desc: "Seeking quick dopamine via social media or trivial tasks.", icon: "📱", color: "#3b82f6" },
+                        { title: "3. Guilt Phase", desc: "Awareness of dwindling time causes underlying stress and guilt.", icon: "💭", color: "#f59e0b" },
+                        { title: "4. The Crisis", desc: "Deadline approaches. Adrenaline-fueled panic mode activates.", icon: "⚡", color: "#ef4444" },
+                        { title: "5. Aftermath", desc: "Submission followed by a vow to 'never do this again'.", icon: "🤝", color: "#10b981" }
+                      ].map((step, i) => (
+                        <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", zIndex: 1 }}>
+                          <div style={{ 
+                            width: 52, height: 52, borderRadius: 16, background: "rgba(255,255,255,0.95)",
+                            display: "flex", alignItems: "center", justifyContent: "center", fontSize: 24,
+                            boxShadow: `0 4px 16px ${step.color}33`, border: `2px solid ${step.color}aa`,
+                            marginBottom: 12
+                          }}>
+                            {step.icon}
+                          </div>
+                          <div style={{ fontSize: 13, fontWeight: 700, color: "#2d2040", marginBottom: 4 }}>{step.title}</div>
+                          <div style={{ fontSize: 11, color: "rgba(60,40,100,0.9)", lineHeight: 1.4, padding: "0 8px" }}>{step.desc}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </GlassPanel>
               </div>
             </>
           )}
