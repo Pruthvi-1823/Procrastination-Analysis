@@ -1,3 +1,20 @@
-"The Procrastinator's Mirror" is an interactive behavioral telemetry web application designed to translate messy, qualitative student survey data into a structured, quantitative intelligence matrix.
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+</div>
 
-Instead of treating procrastination as an unmeasurable, vague personal trait, this project framework treats task avoidance as an operational bottleneck. It captures human behavioral habits (such as avoidance patterns and choice paralysis) and maps them directly against hard administrative outcomes like missed deadlines and grade drops.
+# Run and deploy your AI Studio app
+
+This contains everything you need to run your app locally.
+
+View your app in AI Studio: https://ai.studio/apps/197cc27f-f010-4d55-b1df-fb89691d6f2f
+
+## Run Locally
+
+**Prerequisites:**  Node.js
+
+
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`

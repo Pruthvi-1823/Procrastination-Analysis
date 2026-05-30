@@ -93,7 +93,7 @@ const CSS = `
   }
   .nav-item:not(.active) {
     background: transparent; border: 1px solid transparent;
-    color: rgba(60,40,100,0.5);
+    color: rgba(60,40,100,0.9);
   }
   .nav-item:not(.active):hover {
     background: rgba(255,255,255,0.35);
@@ -146,9 +146,9 @@ const CSS = `
   ::-webkit-scrollbar-thumb { background: rgba(160,140,200,0.3); border-radius: 10px; }
 
   /* Section heading */
-  .section-num { font-size: 10.5px; color: rgba(80,60,130,0.4); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 3px; }
+  .section-num { font-size: 10.5px; color: rgba(80,60,130,0.8); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 3px; }
   .section-title { font-size: 16px; font-weight: 700; color: #2d2040; }
-  .section-sub { font-size: 11.5px; color: rgba(80,60,130,0.5); margin-top: 2px; }
+  .section-sub { font-size: 11.5px; color: rgba(80,60,130,0.9); margin-top: 2px; }
 `;
 
 const TOOLTIP_STYLE = {
@@ -297,7 +297,7 @@ function PillBar({ value, maxVal, color, label, height = 120 }) {
           boxShadow: `0 0 18px ${color}88, inset 0 2px 0 rgba(255,255,255,0.4)`,
         }} />
       </div>
-      <div style={{ fontSize: 11, color: "rgba(60,40,100,0.55)", marginTop: 2 }}>{label}</div>
+      <div style={{ fontSize: 11, color: "rgba(60,40,100,0.9)", marginTop: 2 }}>{label}</div>
       <div style={{ fontSize: 13, fontWeight: 700, color: "#2d2040" }}>{value}</div>
     </div>
   );
@@ -329,7 +329,7 @@ function GlassDonut({ pct, color, size = 110, label }) {
           <text x={cx} y={cy + 5} textAnchor="middle" fontSize="15" fontWeight="700" fill="#2d2040">{pct}%</text>
         </svg>
       </div>
-      {label && <div style={{ fontSize: 11, color: "rgba(60,40,100,0.55)", fontWeight: 500 }}>{label}</div>}
+      {label && <div style={{ fontSize: 11, color: "rgba(60,40,100,0.9)", fontWeight: 500 }}>{label}</div>}
     </div>
   );
 }
@@ -352,9 +352,9 @@ function StatCard({ icon, label, value, sub, gradient }) {
         <span style={{ fontSize: 20 }}>{icon}</span>
       </div>
       <div>
-        <div style={{ fontSize: 11, color: "rgba(80,60,130,0.5)", letterSpacing: "0.06em", textTransform: "uppercase" }}>{label}</div>
+        <div style={{ fontSize: 11, color: "rgba(80,60,130,0.9)", letterSpacing: "0.06em", textTransform: "uppercase" }}>{label}</div>
         <div style={{ fontSize: 28, fontWeight: 700, color: "#2d2040", lineHeight: 1.1 }}>{value}</div>
-        {sub && <div style={{ fontSize: 11, color: "rgba(80,60,130,0.45)", marginTop: 2 }}>{sub}</div>}
+        {sub && <div style={{ fontSize: 11, color: "rgba(80,60,130,0.85)", marginTop: 2 }}>{sub}</div>}
       </div>
     </div>
   );
@@ -440,11 +440,11 @@ export default function App() {
                 <div style={{ fontSize:12.5, fontWeight:700, color:"#8b5cf6", lineHeight:1.2 }}>Mirror</div>
               </div>
             </div>
-            <div style={{ fontSize:9.5, color:"rgba(80,60,130,0.38)", letterSpacing:"0.1em", marginTop:6 }}>DEEP-DIVE BEHAVIORAL ANALYSIS</div>
+            <div style={{ fontSize:9.5, color:"rgba(80,60,130,0.78)", letterSpacing:"0.1em", marginTop:6 }}>DEEP-DIVE BEHAVIORAL ANALYSIS</div>
           </div>
 
           <div style={{ padding:"14px 8px 0", flex:1 }}>
-            <div style={{ fontSize:9.5, color:"rgba(80,60,130,0.35)", letterSpacing:"0.12em", padding:"0 8px", marginBottom:6 }}>CONTROL CENTER</div>
+            <div style={{ fontSize:9.5, color:"rgba(80,60,130,0.75)", letterSpacing:"0.12em", padding:"0 8px", marginBottom:6 }}>CONTROL CENTER</div>
             {NAV.map(n => (
               <button key={n.id} onClick={() => setActive(n.id)} className={`nav-item ${active===n.id?"active":""}`}>
                 <span style={{ fontSize:14 }}>{n.icon}</span>{n.label}
@@ -453,12 +453,12 @@ export default function App() {
           </div>
 
           <div style={{ margin:"0 10px 14px", padding:14, borderRadius:16, background:"rgba(255,255,255,0.45)", border:"1px solid rgba(255,255,255,0.75)", boxShadow:"0 2px 12px rgba(160,140,200,0.1)" }}>
-            <div style={{ fontSize:11.5, fontStyle:"italic", color:"rgba(60,40,100,0.6)", lineHeight:1.65 }}>
+            <div style={{ fontSize:11.5, fontStyle:"italic", color:"rgba(60,40,100,0.95)", lineHeight:1.65 }}>
               "The first step in overcoming procrastination is understanding its patterns."
             </div>
-            <div style={{ fontSize:10, color:"rgba(80,60,130,0.35)", marginTop:8 }}>— Behavioral Psychology Research</div>
+            <div style={{ fontSize:10, color:"rgba(80,60,130,0.75)", marginTop:8 }}>— Behavioral Psychology Research</div>
           </div>
-          <div style={{ padding:"0 18px", fontSize:9.5, color:"rgba(80,60,130,0.3)" }}>Data collected from Survey</div>
+          <div style={{ padding:"0 18px", fontSize:9.5, color:"rgba(80,60,130,0.7)" }}>Data collected from Survey</div>
         </aside>
 
         {/* ─── MAIN ─── */}
@@ -489,7 +489,7 @@ export default function App() {
             <>
               <div style={{ marginBottom:22 }}>
                 <h1 style={{ fontSize:26, fontWeight:800, color:"#2d2040" }}>Behavioral Analysis Canvas</h1>
-                <p style={{ fontSize:13, color:"rgba(80,60,130,0.45)", marginTop:5 }}>Monitoring peak task procrastination frequencies</p>
+                <p style={{ fontSize:13, color:"rgba(80,60,130,0.85)", marginTop:5 }}>Monitoring peak task procrastination frequencies</p>
               </div>
 
               <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr 1fr", gap:14, marginBottom:16 }}>
@@ -512,7 +512,7 @@ export default function App() {
                   }}>
                     <div style={{ fontSize:26, marginBottom:10 }}>{c.icon}</div>
                     <div style={{ fontSize:14, fontWeight:700, color:"#2d2040", marginBottom:7 }}>{c.title}</div>
-                    <div style={{ fontSize:12, color:"rgba(60,40,100,0.6)", lineHeight:1.65 }}>{c.desc}</div>
+                    <div style={{ fontSize:12, color:"rgba(60,40,100,0.95)", lineHeight:1.65 }}>{c.desc}</div>
                   </div>
                 ))}
               </div>
@@ -524,7 +524,7 @@ export default function App() {
             <>
               <div style={{ marginBottom:22 }}>
                 <h1 style={{ fontSize:26, fontWeight:800, color:"#2d2040" }}>Behavioral Patterns</h1>
-                <p style={{ fontSize:13, color:"rgba(80,60,130,0.45)", marginTop:5 }}>Monitoring peak task procrastination frequencies</p>
+                <p style={{ fontSize:13, color:"rgba(80,60,130,0.85)", marginTop:5 }}>Monitoring peak task procrastination frequencies</p>
               </div>
               <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:18 }}>
 
@@ -546,7 +546,7 @@ export default function App() {
                           {[["#d946ef","Female",f],["#60a5fa","Male",m]].map(([c,l,v]) => (
                             <div key={l as string} style={{ display:"flex", alignItems:"center", gap:6 }}>
                               <div style={{ width:9, height:9, borderRadius:3, background:c as string }} />
-                              <span style={{ color:"rgba(60,40,100,0.55)" }}>{l as string}</span>
+                              <span style={{ color:"rgba(60,40,100,0.9)" }}>{l as string}</span>
                               <span style={{ fontWeight:700, color:"#2d2040" }}>{v as number}</span>
                             </div>
                           ))}
@@ -580,14 +580,14 @@ export default function App() {
                           <Cell key={i} fill={c} fillOpacity={0.82} />
                         ))}
                       </Pie>
-                      <text x={82} y={78} textAnchor="middle" fontSize={9} fill="rgba(60,40,100,0.5)" fontWeight={500}>TOP</text>
+                      <text x={82} y={78} textAnchor="middle" fontSize={9} fill="rgba(60,40,100,0.9)" fontWeight={500}>TOP</text>
                       <text x={82} y={92} textAnchor="middle" fontSize={9} fill="#2d2040" fontWeight={700}>Phone/Social</text>
                     </PieChart>
                     <div style={{ display:"flex", flexDirection:"column", gap:7 }}>
                       {distractData.map((d, i) => (
                         <div key={i} style={{ display:"flex", alignItems:"center", gap:8, fontSize:12 }}>
                           <div style={{ width:8, height:8, borderRadius:2, background:["#a78bfa","#22d3ee","#f472b6","#4ade80","#fb923c"][i] }} />
-                          <span style={{ color:"rgba(60,40,100,0.55)" }}>{d.name}</span>
+                          <span style={{ color:"rgba(60,40,100,0.9)" }}>{d.name}</span>
                           <span style={{ fontWeight:700, color:"#2d2040", marginLeft:"auto", paddingLeft:8 }}>{d.value}</span>
                         </div>
                       ))}
@@ -602,7 +602,7 @@ export default function App() {
                   <div style={{ display:"flex", flexDirection:"column", gap:10, marginTop:8 }}>
                     {excuseData.map((d, i) => (
                       <div key={i}>
-                        <div style={{ display:"flex", justifyContent:"space-between", fontSize:11.5, color:"rgba(60,40,100,0.55)", marginBottom:4 }}>
+                        <div style={{ display:"flex", justifyContent:"space-between", fontSize:11.5, color:"rgba(60,40,100,0.9)", marginBottom:4 }}>
                           <span>{d.name as string}</span><span style={{ fontWeight:700, color:"#2d2040" }}>{d.value as number}</span>
                         </div>
                         <div style={{ height:9, borderRadius:999, background:"rgba(180,160,240,0.15)", overflow:"hidden" }}>
@@ -624,8 +624,8 @@ export default function App() {
                   <SectionHead n={5} title="Habit Clustering Grid" sub="Timing vs time of day" />
                   <ResponsiveContainer width="100%" height={190}>
                     <BarChart data={habitData} barCategoryGap="25%" barGap={2}>
-                      <XAxis dataKey="time" tick={{ fill:"rgba(60,40,100,0.5)", fontSize:11 }} axisLine={false} tickLine={false} />
-                      <YAxis tick={{ fill:"rgba(60,40,100,0.4)", fontSize:10 }} axisLine={false} tickLine={false} />
+                      <XAxis dataKey="time" tick={{ fill:"rgba(60,40,100,0.9)", fontSize:11 }} axisLine={false} tickLine={false} />
+                      <YAxis tick={{ fill:"rgba(60,40,100,0.8)", fontSize:10 }} axisLine={false} tickLine={false} />
                       <Tooltip contentStyle={TOOLTIP_STYLE} cursor={{ fill:"rgba(180,160,240,0.08)" }} />
                       <Bar dataKey="Day before" stackId="a" fill="#f472b6" fillOpacity={0.8} />
                       <Bar dataKey="2-3 days before" stackId="a" fill="#a78bfa" fillOpacity={0.8} />
@@ -648,7 +648,7 @@ export default function App() {
                     const segs = [Math.round((y/total)*100), Math.round((c/total)*100), Math.round((n/total)*100)];
                     return (
                       <div key={i} style={{ display:"flex", alignItems:"center", gap:10, marginBottom:10 }}>
-                        <div style={{ width:64, fontSize:11.5, color:"rgba(60,40,100,0.5)", textAlign:"right" }}>{label}</div>
+                        <div style={{ width:64, fontSize:11.5, color:"rgba(60,40,100,0.9)", textAlign:"right" }}>{label}</div>
                         <div style={{ flex:1, height:20, display:"flex", borderRadius:999, overflow:"hidden" }}>
                           {segs[0] > 0 && <div style={{ width:`${segs[0]}%`, background:"#f472b6", opacity:0.8 }} title={`Impacts Grades: ${segs[0]}%`} />}
                           {segs[1] > 0 && <div style={{ width:`${segs[1]}%`, background:"#fbbf24", opacity:0.8 }} title={`Variable: ${segs[1]}%`} />}
@@ -661,7 +661,7 @@ export default function App() {
                     {[["#f472b6","Impacts Grades"],["#fbbf24","Variable"],["#4ade80","No Impact"]].map(([c,l]) => (
                       <div key={l} style={{ display:"flex", alignItems:"center", gap:5 }}>
                         <div style={{ width:8, height:8, borderRadius:2, background:c }} />
-                        <span style={{ color:"rgba(60,40,100,0.5)" }}>{l}</span>
+                        <span style={{ color:"rgba(60,40,100,0.9)" }}>{l}</span>
                       </div>
                     ))}
                   </div>
@@ -683,8 +683,8 @@ export default function App() {
                   <SectionHead n={8} title="Task Avoidance Density" sub="Stacked area by task type" />
                   <ResponsiveContainer width="100%" height={180}>
                     <AreaChart data={taskDataArea}>
-                      <XAxis dataKey="task" tick={{ fill:"rgba(60,40,100,0.45)", fontSize:10 }} axisLine={false} tickLine={false} />
-                      <YAxis tick={{ fill:"rgba(60,40,100,0.35)", fontSize:10 }} axisLine={false} tickLine={false} />
+                      <XAxis dataKey="task" tick={{ fill:"rgba(60,40,100,0.85)", fontSize:10 }} axisLine={false} tickLine={false} />
+                      <YAxis tick={{ fill:"rgba(60,40,100,0.75)", fontSize:10 }} axisLine={false} tickLine={false} />
                       <Tooltip contentStyle={TOOLTIP_STYLE} />
                       <Area type="monotone" dataKey="Always"    stackId="1" stroke="#22d3ee" fill="#22d3ee" fillOpacity={0.25} />
                       <Area type="monotone" dataKey="Often"     stackId="1" stroke="#a78bfa" fill="#a78bfa" fillOpacity={0.25} />
@@ -699,10 +699,10 @@ export default function App() {
                   <SectionHead n={9} title="Intention vs Action" sub="Grouped column: attempts to fix habits by self-awareness" />
                   <ResponsiveContainer width="100%" height={210}>
                     <BarChart data={intentionData} barCategoryGap="35%" barGap={4}>
-                      <XAxis dataKey="group" tick={{ fill:"rgba(60,40,100,0.5)", fontSize:12 }} axisLine={false} tickLine={false} />
-                      <YAxis tick={{ fill:"rgba(60,40,100,0.4)", fontSize:11 }} axisLine={false} tickLine={false} />
+                      <XAxis dataKey="group" tick={{ fill:"rgba(60,40,100,0.9)", fontSize:12 }} axisLine={false} tickLine={false} />
+                      <YAxis tick={{ fill:"rgba(60,40,100,0.8)", fontSize:11 }} axisLine={false} tickLine={false} />
                       <Tooltip contentStyle={TOOLTIP_STYLE} cursor={{ fill:"rgba(180,160,240,0.08)" }} />
-                      <Legend wrapperStyle={{ fontSize:12, color:"rgba(60,40,100,0.5)", paddingTop:6 }} />
+                      <Legend wrapperStyle={{ fontSize:12, color:"rgba(60,40,100,0.9)", paddingTop:6 }} />
                       <Bar dataKey="Failed"  fill="#f472b6" fillOpacity={0.8} radius={[5,5,0,0]} />
                       <Bar dataKey="Never"   fill="#94a3b8" fillOpacity={0.7} radius={[5,5,0,0]} />
                       <Bar dataKey="Success" fill="#4ade80" fillOpacity={0.8} radius={[5,5,0,0]} />
@@ -715,10 +715,10 @@ export default function App() {
                   <SectionHead n={10} title="Emotional Sentiment Timeline" sub="Line chart tracking feelings across study years" />
                   <ResponsiveContainer width="100%" height={210}>
                     <LineChart data={emotionData}>
-                      <XAxis dataKey="year" tick={{ fill:"rgba(60,40,100,0.5)", fontSize:12 }} axisLine={false} tickLine={false} />
-                      <YAxis tick={{ fill:"rgba(60,40,100,0.4)", fontSize:11 }} axisLine={false} tickLine={false} />
+                      <XAxis dataKey="year" tick={{ fill:"rgba(60,40,100,0.9)", fontSize:12 }} axisLine={false} tickLine={false} />
+                      <YAxis tick={{ fill:"rgba(60,40,100,0.8)", fontSize:11 }} axisLine={false} tickLine={false} />
                       <Tooltip contentStyle={TOOLTIP_STYLE} />
-                      <Legend wrapperStyle={{ fontSize:12, color:"rgba(60,40,100,0.5)" }} />
+                      <Legend wrapperStyle={{ fontSize:12, color:"rgba(60,40,100,0.9)" }} />
                       <Line type="monotone" dataKey="Guilty"    stroke="#f472b6" strokeWidth={2.5} dot={{ fill:"#f472b6", r:4, strokeWidth:0 }} />
                       <Line type="monotone" dataKey="Motivated" stroke="#22d3ee" strokeWidth={2.5} dot={{ fill:"#22d3ee", r:4, strokeWidth:0 }} />
                       <Line type="monotone" dataKey="Stressed"  stroke="#a78bfa" strokeWidth={2.5} dot={{ fill:"#a78bfa", r:4, strokeWidth:0 }} />
@@ -735,7 +735,7 @@ export default function App() {
             <>
               <div style={{ marginBottom:22 }}>
                 <h1 style={{ fontSize:26, fontWeight:800, color:"#2d2040" }}>Intervention Tools</h1>
-                <p style={{ fontSize:13, color:"rgba(80,60,130,0.45)", marginTop:5 }}>Personalized risk assessment and resources</p>
+                <p style={{ fontSize:13, color:"rgba(80,60,130,0.85)", marginTop:5 }}>Personalized risk assessment and resources</p>
               </div>
 
               {/* Delay Threshold */}
@@ -744,16 +744,16 @@ export default function App() {
                   <div style={{ width:44, height:44, borderRadius:13, background:"linear-gradient(135deg,#fecdd3,#fda4af)", border:"1px solid rgba(255,255,255,0.85)", display:"flex", alignItems:"center", justifyContent:"center", fontSize:22 }}>🛡️</div>
                   <div>
                     <div style={{ fontSize:17, fontWeight:700, color:"#2d2040" }}>Test Your Delay Threshold</div>
-                    <div style={{ fontSize:12, color:"rgba(80,60,130,0.45)", marginTop:2 }}>Configure your typical behavioral inputs to generate a personalized risk index.</div>
+                    <div style={{ fontSize:12, color:"rgba(80,60,130,0.85)", marginTop:2 }}>Configure your typical behavioral inputs to generate a personalized risk index.</div>
                   </div>
                 </div>
                 <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:28 }}>
                   <div>
-                    <label style={{ display:"block", fontSize:10.5, letterSpacing:"0.1em", color:"rgba(80,60,130,0.45)", marginBottom:8, textTransform:"uppercase" }}>Primary Distraction Source</label>
+                    <label style={{ display:"block", fontSize:10.5, letterSpacing:"0.1em", color:"rgba(80,60,130,0.85)", marginBottom:8, textTransform:"uppercase" }}>Primary Distraction Source</label>
                     <select value={distraction} onChange={e => setDistraction(e.target.value)} style={{
                       width:"100%", padding:"11px 14px", borderRadius:12,
                       background:"rgba(255,255,255,0.55)", border:"1px solid rgba(180,160,240,0.3)",
-                      color: distraction ? "#2d2040" : "rgba(80,60,130,0.4)",
+                      color: distraction ? "#2d2040" : "rgba(80,60,130,0.8)",
                       fontSize:13, backdropFilter:"blur(8px)", outline:"none", cursor:"pointer",
                       fontFamily:"'DM Sans', sans-serif",
                     }}>
@@ -763,11 +763,11 @@ export default function App() {
                       ))}
                     </select>
 
-                    <label style={{ display:"block", fontSize:10.5, letterSpacing:"0.1em", color:"rgba(80,60,130,0.45)", margin:"18px 0 8px", textTransform:"uppercase" }}>
+                    <label style={{ display:"block", fontSize:10.5, letterSpacing:"0.1em", color:"rgba(80,60,130,0.85)", margin:"18px 0 8px", textTransform:"uppercase" }}>
                       Typical Deadline Proximity
                       <span style={{ float:"right", color:"#2d2040", fontWeight:700, letterSpacing:0 }}>{proximity}%</span>
                     </label>
-                    <div style={{ display:"flex", justifyContent:"space-between", fontSize:9.5, color:"rgba(80,60,130,0.35)", marginBottom:5 }}>
+                    <div style={{ display:"flex", justifyContent:"space-between", fontSize:9.5, color:"rgba(80,60,130,0.75)", marginBottom:5 }}>
                       <span>DAYS BEFORE</span><span>MINUTES BEFORE</span>
                     </div>
                     <input type="range" min={0} max={100} step={1} value={proximity} onChange={e => setProximity(+e.target.value)} style={{ width:"100%", accentColor:"#a855f7" }} />
@@ -776,7 +776,7 @@ export default function App() {
                       marginTop:18, width:"100%", padding:"13px 0",
                       borderRadius:12, border:"none", cursor:"pointer",
                       background: distraction ? "linear-gradient(135deg,#a855f7,#ec4899)" : "rgba(180,160,240,0.3)",
-                      color: distraction ? "#fff" : "rgba(80,60,130,0.4)",
+                      color: distraction ? "#fff" : "rgba(80,60,130,0.8)",
                       fontSize:14, fontWeight:700, fontFamily:"'DM Sans', sans-serif",
                       boxShadow: distraction ? "0 4px 20px rgba(168,85,247,0.35)" : "none",
                       transition:"all 0.2s",
@@ -787,18 +787,18 @@ export default function App() {
                     border: riskLevel ? "none" : "1.5px dashed rgba(180,160,240,0.3)", borderRadius:16, minHeight:180 }}>
                     {riskLevel ? (
                       <div style={{ textAlign:"center" }}>
-                        <div style={{ fontSize:12, color:"rgba(80,60,130,0.45)", marginBottom:8 }}>Your Procrastination Risk</div>
+                        <div style={{ fontSize:12, color:"rgba(80,60,130,0.85)", marginBottom:8 }}>Your Procrastination Risk</div>
                         <div style={{
                           fontSize:52, fontWeight:900, letterSpacing:"-0.02em",
                           color: riskLevel==="HIGH" ? "#f43f5e" : riskLevel==="MEDIUM" ? "#f59e0b" : "#22c55e",
                           textShadow: `0 0 40px ${riskLevel==="HIGH" ? "#f43f5e" : riskLevel==="MEDIUM" ? "#f59e0b" : "#22c55e"}44`,
                         }}>{riskLevel}</div>
-                        <div style={{ fontSize:12, color:"rgba(80,60,130,0.45)", marginTop:8, maxWidth:180 }}>
+                        <div style={{ fontSize:12, color:"rgba(80,60,130,0.85)", marginTop:8, maxWidth:180 }}>
                           {riskLevel==="HIGH" ? "Critical pattern. Immediate intervention recommended." : riskLevel==="MEDIUM" ? "Moderate risk. Consider time management strategies." : "Low risk! Keep up the great habits."}
                         </div>
                       </div>
                     ) : (
-                      <div style={{ textAlign:"center", color:"rgba(80,60,130,0.35)", fontSize:12.5 }}>
+                      <div style={{ textAlign:"center", color:"rgba(80,60,130,0.75)", fontSize:12.5 }}>
                         Complete the form and click the button<br />to reveal your procrastination profile
                       </div>
                     )}
@@ -811,7 +811,7 @@ export default function App() {
                 <div style={{ display:"flex", alignItems:"flex-start", justifyContent:"space-between", marginBottom:14 }}>
                   <div>
                     <div style={{ fontSize:17, fontWeight:700, color:"#2d2040" }}>👥 The {totalStudents} Minds Landscape</div>
-                    <div style={{ fontSize:12, color:"rgba(80,60,130,0.45)", marginTop:3 }}>Every icon represents one student. Hover to see their story.</div>
+                    <div style={{ fontSize:12, color:"rgba(80,60,130,0.85)", marginTop:3 }}>Every icon represents one student. Hover to see their story.</div>
                   </div>
                   <div style={{ display:"flex", gap:5, flexWrap:"wrap", justifyContent:"flex-end" }}>
                     {["ALL","ALWAYS","OFTEN","SOMETIMES","RARELY","NEVER"].map(f => (
@@ -819,7 +819,7 @@ export default function App() {
                         padding:"4px 11px", borderRadius:20, border:"none", cursor:"pointer",
                         fontSize:10.5, fontWeight:600, fontFamily:"'DM Sans', sans-serif",
                         background: studentFilter===f ? "linear-gradient(135deg,#a855f7,#818cf8)" : "rgba(255,255,255,0.55)",
-                        color: studentFilter===f ? "#fff" : "rgba(80,60,130,0.5)",
+                        color: studentFilter===f ? "#fff" : "rgba(80,60,130,0.9)",
                         border: studentFilter===f ? "none" : "1px solid rgba(180,160,240,0.2)",
                         boxShadow: studentFilter===f ? "0 2px 10px rgba(160,100,255,0.25)" : "none",
                         transition:"all 0.15s",
@@ -865,7 +865,7 @@ export default function App() {
                       <div style={{ width:38, height:38, borderRadius:10, background:s.grad, display:"flex", alignItems:"center", justifyContent:"center", fontSize:18, flexShrink:0 }}>{s.icon}</div>
                       <div>
                         <div style={{ fontSize:22, fontWeight:800, color:"#2d2040" }}>{s.v}</div>
-                        <div style={{ fontSize:9.5, color:"rgba(80,60,130,0.4)", letterSpacing:"0.07em" }}>{s.l}</div>
+                        <div style={{ fontSize:9.5, color:"rgba(80,60,130,0.8)", letterSpacing:"0.07em" }}>{s.l}</div>
                       </div>
                     </div>
                   ))}
@@ -883,7 +883,7 @@ export default function App() {
                   ].map((r,i) => (
                     <div key={i} style={{ padding:16, borderRadius:16, background:r.grad, border:"1px solid rgba(255,255,255,0.85)", boxShadow:"0 2px 12px rgba(160,140,200,0.1)" }}>
                       <div style={{ fontSize:13.5, fontWeight:700, color:r.c, marginBottom:7 }}>{r.title}</div>
-                      <div style={{ fontSize:11.5, color:"rgba(60,40,100,0.55)", lineHeight:1.6 }}>{r.desc}</div>
+                      <div style={{ fontSize:11.5, color:"rgba(60,40,100,0.9)", lineHeight:1.6 }}>{r.desc}</div>
                     </div>
                   ))}
                 </div>
@@ -897,7 +897,7 @@ export default function App() {
                     <div style={{ width:28, height:28, borderRadius:9, flexShrink:0, background:"linear-gradient(135deg,#c084fc,#818cf8)", display:"flex", alignItems:"center", justifyContent:"center", fontSize:13, fontWeight:700, color:"#fff", boxShadow:"0 2px 10px rgba(160,100,255,0.3)" }}>{s.n}</div>
                     <div>
                       <div style={{ fontSize:13.5, fontWeight:700, color:"#7c3aed", marginBottom:3 }}>{s.title}</div>
-                      <div style={{ fontSize:12, color:"rgba(60,40,100,0.5)", lineHeight:1.65 }}>{s.desc}</div>
+                      <div style={{ fontSize:12, color:"rgba(60,40,100,0.9)", lineHeight:1.65 }}>{s.desc}</div>
                     </div>
                   </div>
                 ))}
@@ -910,13 +910,13 @@ export default function App() {
             <>
               <div style={{ marginBottom:22 }}>
                 <h1 style={{ fontSize:26, fontWeight:800, color:"#2d2040" }}>Behavioral Analysis Canvas</h1>
-                <p style={{ fontSize:13, color:"rgba(80,60,130,0.45)", marginTop:5 }}>Monitoring peak task procrastination frequencies</p>
+                <p style={{ fontSize:13, color:"rgba(80,60,130,0.85)", marginTop:5 }}>Monitoring peak task procrastination frequencies</p>
               </div>
               <GlassPanel>
                 <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", marginBottom:16 }}>
                   <div>
                     <div style={{ fontSize:16, fontWeight:700, color:"#2d2040" }}>⬡ Raw Dataset Explorer</div>
-                    <div style={{ fontSize:12, color:"rgba(80,60,130,0.45)", marginTop:3 }}>Browse, filter, and analyze the {totalStudents} responses directly.</div>
+                    <div style={{ fontSize:12, color:"rgba(80,60,130,0.85)", marginTop:3 }}>Browse, filter, and analyze the {totalStudents} responses directly.</div>
                   </div>
                   <input 
                     placeholder="Search dataset..." 
@@ -934,7 +934,7 @@ export default function App() {
                     <thead>
                       <tr>
                         {["Respondent ID","Gender","Year","Stream","Frequency","Task Most","Main Distraction"].map(h => (
-                          <th key={h} style={{ textAlign:"left", padding:"7px 12px", fontSize:10, letterSpacing:"0.08em", color:"rgba(80,60,130,0.38)", textTransform:"uppercase", fontWeight:600 }}>{h}</th>
+                          <th key={h} style={{ textAlign:"left", padding:"7px 12px", fontSize:10, letterSpacing:"0.08em", color:"rgba(80,60,130,0.78)", textTransform:"uppercase", fontWeight:600 }}>{h}</th>
                         ))}
                       </tr>
                     </thead>
@@ -957,7 +957,7 @@ export default function App() {
                           <tr key={i}>
                             <td style={{ padding:"10px 12px", borderRadius:"12px 0 0 12px", background:"rgba(255,255,255,0.5)", color:"#7c3aed", fontWeight:700, border:"1px solid rgba(255,255,255,0.75)", borderRight:"none" }}>{row[0]}</td>
                             {[1,2,3].map(j => (
-                              <td key={j} style={{ padding:"10px 12px", background:"rgba(255,255,255,0.5)", color:"rgba(60,40,100,0.65)", border:"1px solid rgba(255,255,255,0.75)", borderLeft:"none", borderRight:"none" }}>{row[j]}</td>
+                              <td key={j} style={{ padding:"10px 12px", background:"rgba(255,255,255,0.5)", color:"rgba(60,40,100,0.95)", border:"1px solid rgba(255,255,255,0.75)", borderLeft:"none", borderRight:"none" }}>{row[j]}</td>
                             ))}
                             <td style={{ padding:"10px 12px", background:"rgba(255,255,255,0.5)", border:"1px solid rgba(255,255,255,0.75)", borderLeft:"none", borderRight:"none" }}>
                               <span style={{ padding:"3px 10px", borderRadius:20, fontSize:11, fontWeight:700, background:`${bg}18`, color:bg, border:`1px solid ${bg}44` }}>{row[4]}</span>
@@ -965,7 +965,7 @@ export default function App() {
                             {[5,6].map((j,k) => (
                               <td key={j} style={{
                                 padding:"10px 12px", background:"rgba(255,255,255,0.5)",
-                                color:"rgba(60,40,100,0.55)",
+                                color:"rgba(60,40,100,0.9)",
                                 border:"1px solid rgba(255,255,255,0.75)", borderLeft:"none",
                                 borderRight: k===1 ? "1px solid rgba(255,255,255,0.75)" : "none",
                                 borderRadius: k===1 ? "0 12px 12px 0" : 0,
